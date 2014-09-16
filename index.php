@@ -72,10 +72,23 @@
   <?php $assoc["first_name"] = "Eve" ?>
   <?php $assoc["last_name"] = "Link" ?>
   <?php $assoc["email"] = "eve.link@khk.ee" ?>
-  <?php echo $assoc['last_name']; ?><br>
-  <?php echo $assoc['first_name'];?><br>
+  <?php echo $assoc['last_name']; ?> <br>
+  <?php echo $assoc['first_name'];?> <br>
   <?php echo $assoc['email']; ?><br>
-      <?php echo "Minu nimi on {$assoc["first_name"]} {$assoc["last_name"]}. Minu email on {$assoc["email"]}."; ?>
+  <?php echo "Minu nimi on {$assoc["first_name"]} {$assoc["last_name"]}. Minu email on {$assoc["email"]}."; ?>
 
+  <h2>Array functions</h2>
+  <?php $numbers_2 = array(8,23,15,42,16,4); ?>
+  <?php echo count($numbers_2); ?><br>
+  <?php echo max($numbers_2); ?> <br>
+  <?php echo min($numbers_2); ?> <br>
+  <?php 
+  sort($numbers_2);
+  print_r($numbers_2);
+  ?>
+
+  <?php $num_string = implode(" ja ", $numbers_2);
+  echo $num_string; ?> <br>
+  <?php print_r(explode(" ja ", $num_string)); ?>
 </body>
 </html> 
