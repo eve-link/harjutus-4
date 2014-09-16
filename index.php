@@ -38,21 +38,44 @@
   <?php echo "Kas {$integer} on numeber? " . is_numeric($integer); ?><br>
   <?php echo "Kas {$float} on number? " . is_numeric($float); ?><br>
 
-<h2>Jadad</h2>
-<?php
-    $numbers = array(4,8,15,16,23,42); ?>
-    <?php echo $numbers[0]; ?> <br>
-    <?php echo $numbers[1]; ?> <br>
-    <?php echo $numbers[2]; ?> <br>
-    <?php echo $numbers[3]; ?> <br>
-    <?php echo $numbers[4]; ?> <br>
-    <?php echo $numbers[5]; ?> <br>
-<?php  $mixed = array(6, "rebane", "koer", 5.5, array("x", "y", "z"));?>
+  <h2>Jadad</h2>
+  <?php
+  $numbers = array(4,8,15,16,23,42); ?>
+  <?php echo $numbers[0]; ?> <br>
+  <?php echo $numbers[1]; ?> <br>
+  <?php echo $numbers[2]; ?> <br>
+  <?php echo $numbers[3]; ?> <br>
+  <?php echo $numbers[4]; ?> <br>
+  <?php echo $numbers[5]; ?> <br>
+  <?php  $mixed = array(6, "rebane", "koer", 5.5, array("x", "y", "z"));?>
 
-<?php echo $mixed[2];?> <br>
-<?php echo $mixed[4][2];?> <br>
+  <?php echo $mixed[2];?> <br>
+  <?php echo $mixed[4][2];?> <br>
 
+  <?php $mixed[2] = "kass"; ?>
+  <?php $mixed[5] = "hiir"; ?>
+  <?php $mixed[] = "hobune"; ?>
+  <pre><?php echo print_r($mixed); ?>
+  </pre>
 
+  <h2>Associative arrays</h2>
+  <?php $assoc = array("first_name" => "Sinu_eesnimi", "last_name" => "Sinu_perekonnanimi"); ?>
+  <?php $assoc = array("first_name" => "Eve", "last_name" => "Link"); ?>
+  <?php echo $assoc['first_name'];?> <br>
+  <?php echo $assoc['last_name'];?> <br>
+
+  <?php $numbers = array(0 => 4, 5 => 8, 6 => 15, 9 => 16, 10 => 23, 15 => 42); ?>
+
+  <?php $assoc["age"] = 25; ?>
+  <?php $assoc["first_name"] = "Peeter" ?>
+
+  <?php $assoc["first_name"] = "Eve" ?>
+  <?php $assoc["last_name"] = "Link" ?>
+  <?php $assoc["email"] = "eve.link@khk.ee" ?>
+  <?php echo $assoc['last_name']; ?><br>
+  <?php echo $assoc['first_name'];?><br>
+  <?php echo $assoc['email']; ?><br>
+      <?php echo "Minu nimi on {$assoc["first_name"]} {$assoc["last_name"]}. Minu email on {$assoc["email"]}."; ?>
 
 </body>
 </html> 
